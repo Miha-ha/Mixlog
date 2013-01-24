@@ -93,13 +93,13 @@ Blog.prototype.generate = function (){
 Blog.prototype.copyAssets = function(){
     var srcPath = fs.realpathSync(this.config.path.assets),
         dstPath = fs.realpathSync(__dirname+'/..')+'/assets/';
-//    wrench.rmdirRecursive(path, function(err){
-//        //if(err) throw err;
-//
-//        wrench.copyDirRecursive(config.path.assets, path, function(err){
-//            if(err) throw err;
-//        });
-//    });
+    wrench.rmdirRecursive(dstPath, function(err){
+//        if(err) throw err;
+
+        wrench.copyDirRecursive(srcPath, dstPath, function(err){
+            if(err) throw err;
+        });
+    });
     //TODO: разобраться с сиволическими ссылками
 //    fs.link(srcPath, dstPath, function(err){
 //        if(err) throw err;
