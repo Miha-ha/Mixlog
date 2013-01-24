@@ -1,0 +1,16 @@
+title: Миха-ха
+
+author:
+    name: 'Рубцов Михаил'
+    email: 'miha-ha@ya.ru'
+    github: Miha-ha
+
+theme: hack
+
+path:
+  home: /
+  asset: ../assets
+
+#permalink: /posts/:year/:month/:day/:title/
+
+pretty: true
